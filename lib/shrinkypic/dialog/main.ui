@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>321</width>
+    <width>366</width>
     <height>382</height>
    </rect>
   </property>
@@ -31,13 +31,6 @@
       <widget class="QLabel" name="FileNameLabel">
        <property name="text">
         <string>File Name</string>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="0" colspan="3">
-      <widget class="QLineEdit" name="CaptionEdit">
-       <property name="toolTip">
-        <string>Enter a caption for this picture</string>
        </property>
       </widget>
      </item>
@@ -80,7 +73,7 @@
        </property>
       </widget>
      </item>
-     <item row="13" column="0">
+     <item row="12" column="0">
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -100,7 +93,7 @@
        </property>
       </widget>
      </item>
-     <item row="13" column="2">
+     <item row="12" column="2">
       <widget class="QPushButton" name="CancelButton">
        <property name="toolTip">
         <string>Click to close the program</string>
@@ -110,7 +103,7 @@
        </property>
       </widget>
      </item>
-     <item row="13" column="1">
+     <item row="12" column="1">
       <widget class="QPushButton" name="OkButton">
        <property name="toolTip">
         <string>Click to begin process</string>
@@ -178,6 +171,16 @@
         </spacer>
        </item>
        <item>
+        <widget class="QCheckBox" name="OutputCheckBox">
+         <property name="text">
+          <string>Output PNG</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QCheckBox" name="OutlineCheckBox">
          <property name="toolTip">
           <string>Add an outline to the picture</string>
@@ -212,11 +215,11 @@
    <sender>OkButton</sender>
    <signal>pressed()</signal>
    <receiver>MainWindow</receiver>
-   <slot>setupUi()</slot>
+   <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>211</x>
-     <y>374</y>
+     <y>371</y>
     </hint>
     <hint type="destinationlabel">
      <x>256</x>
@@ -228,10 +231,10 @@
    <sender>GetPictureButton</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>setupUi()</slot>
+   <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>315</x>
+     <x>310</x>
      <y>59</y>
     </hint>
     <hint type="destinationlabel">
@@ -247,8 +250,8 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>315</x>
-     <y>374</y>
+     <x>310</x>
+     <y>371</y>
     </hint>
     <hint type="destinationlabel">
      <x>246</x>
