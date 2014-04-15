@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QWidget" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>321</width>
+    <height>382</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ShrinkyPic - v0.1.r26</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icon/shrinkypic_32.png</normaloff>../icon/shrinkypic_32.png</iconset>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="4" column="0">
+      <widget class="QLabel" name="PictureRotationLabel">
+       <property name="text">
+        <string>Picture Rotation</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="FileNameLabel">
+       <property name="text">
+        <string>File Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0" colspan="3">
+      <widget class="QLineEdit" name="CaptionEdit">
+       <property name="toolTip">
+        <string>Enter a caption for this picture</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QComboBox" name="SizeSelect">
+       <property name="toolTip">
+        <string>Choose a size to output the picture</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Small</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Medium</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Large</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="CaptionLabel">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter a caption for this picture.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>Caption</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="PictureSizeLabel">
+       <property name="text">
+        <string>Picture Size</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="0">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QLineEdit" name="FileNameEdit">
+       <property name="toolTip">
+        <string>Enter the original picture path and file name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="2">
+      <widget class="QPushButton" name="CancelButton">
+       <property name="toolTip">
+        <string>Click to close the program</string>
+       </property>
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="1">
+      <widget class="QPushButton" name="OkButton">
+       <property name="toolTip">
+        <string>Click to begin process</string>
+       </property>
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QDial" name="RotationDial">
+       <property name="toolTip">
+        <string>Rotate to change picture orientation</string>
+       </property>
+       <property name="minimum">
+        <number>-20</number>
+       </property>
+       <property name="maximum">
+        <number>20</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="GetPictureButton">
+       <property name="toolTip">
+        <string>Browse for a picture to shrink</string>
+       </property>
+       <property name="whatsThis">
+        <string>Opens the file browser</string>
+       </property>
+       <property name="text">
+        <string>Get Picture</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QSpinBox" name="RotationBox">
+       <property name="toolTip">
+        <string>Change picture orientation (-20 to 20 degrees)</string>
+       </property>
+       <property name="minimum">
+        <number>-20</number>
+       </property>
+       <property name="maximum">
+        <number>20</number>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="OutlineCheckBox">
+         <property name="toolTip">
+          <string>Add an outline to the picture</string>
+         </property>
+         <property name="text">
+          <string>Outline</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="ViewCheckBox">
+         <property name="toolTip">
+          <string>Check to view after processing</string>
+         </property>
+         <property name="text">
+          <string>View</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>OkButton</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setupUi()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>211</x>
+     <y>374</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>GetPictureButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setupUi()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>315</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>212</x>
+     <y>121</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>315</x>
+     <y>374</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>246</x>
+     <y>176</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>RotationDial</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>RotationBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>74</x>
+     <y>199</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>75</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>setupUi()</slot>
+ </slots>
+</ui>
