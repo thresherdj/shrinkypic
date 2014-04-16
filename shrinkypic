@@ -30,7 +30,7 @@ from shrinkypic.icon.pyresources    import qInitResources, qCleanupResources
 
 # Set some global vars
 systemName                          = 'ShrinkyPic'
-systemVersion                       = '0.1.r26'
+systemVersion                       = '0.1.r27'
 
 
 class ShrinkyPicMainForm (QDialog, main.Ui_MainWindow) :
@@ -105,7 +105,7 @@ def getOutfileName (inFile, size, rotate) :
     (path, ext)             = os.path.splitext(inFile)
     (thisDir, fileName)     = os.path.split(path)
 
-    return os.path.join(thisDir, fileName + '-' + size.capitalize() + '_' + str(rotate) + '.jpg')
+    return os.path.join(thisDir, fileName + '-' + size.capitalize() + '_' + str(rotate) + '.png')
 
 ###############################################################################
 ############################### Argparser Setup ###############################
